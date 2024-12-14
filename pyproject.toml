@@ -1,0 +1,89 @@
+[tool.poetry]
+name = "training-pipeline"
+version = "0.0.1"
+description = "Training pipeline"
+authors = ["David Pal <davidko.pal@gmail.com>"]
+readme = "README.md"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "3.9.21"
+
+pandas = "^2.2.3"
+pydantic = "^2.10.3"
+tensorflow = "^2.18.0"
+
+[tool.poetry.dev-dependencies]
+black = "^24.10.0"
+coverage = "^7.6.9"
+flake8 = "^7.1.1"
+flake8-absolute-import = "^1.0.0.1"
+init-file-checker = "^0.0.2"
+isort = {extras = ["colors"], version = "^5.13.2"}
+mypy = "^1.13.0"
+pylint = "^3.3.2"
+pytest = "^8.3.4"
+ruff = "^0.8.3"
+whitespace-format = "^0.0.5"
+
+[tool.black]
+line-length = 100
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+force_single_line = true
+line_length = 100
+multi_line_output = 3
+
+[tool.pydocstyle]
+# List of rules (error codes) that should be enforced by pydocstyle.
+# Complete list of codes can be found at: http://www.pydocstyle.org/en/stable/error_codes.html
+# Keep the list below in lexicograhic order!
+select = "D101,D102,D103,D105,D200,D201,D204,D205,D206,D207,D208,D209,D210,D211,D212,D300,D400,D403,D405,D411,D416,D419"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D104",
+    "PT009",
+    "D203",
+    "D213",
+]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+python_version = "3.9"
+
+disallow_untyped_defs = true
+pretty = true
+show_error_code_links = true
+warn_no_return = true
+warn_return_any = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+module = [
+    "keras.*",
+    "tensorflow.*",
+]
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+ignore_errors = true
+
+[tool.coverage.xml]
+output = "pytest_results/coverage.xml"

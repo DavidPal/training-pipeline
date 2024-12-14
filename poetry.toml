@@ -1,0 +1,5 @@
+[virtualenvs]
+
+# Don't create any virtual environment. Locally, use pyenv virtual environment.
+# On CircleCI, don't use any virtual environments at all.
+create = false
