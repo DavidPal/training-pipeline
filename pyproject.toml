@@ -10,24 +10,24 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.dependencies]
-python = "3.9.20"
+python = "3.9.21"
 
 pandas = "^2.2.3"
-pydantic = "^2.10.3"
+pydantic = "^2.10.4"
 tensorflow = "^2.18.0"
 
 [tool.poetry.dev-dependencies]
 black = "^24.10.0"
-coverage = "^7.6.9"
+coverage = "^7.6.10"
 flake8 = "^7.1.1"
 flake8-absolute-import = "^1.0.0.1"
 init-file-checker = "^0.0.2"
 isort = {extras = ["colors"], version = "^5.13.2"}
-mypy = "^1.13.0"
-pylint = "^3.3.2"
+mypy = "^1.14.0"
+pylint = "^3.3.3"
 pytest = "^8.3.4"
-ruff = "^0.8.3"
-whitespace-format = "^0.0.5"
+ruff = "^0.8.4"
+whitespace-format = "^0.0.6"
 
 [tool.black]
 line-length = 100

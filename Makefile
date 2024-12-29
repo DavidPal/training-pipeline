@@ -1,5 +1,5 @@
 PYTHON_ENVIRONMENT = "training-pipeline"
-PYTHON_VERSION = "3.9.20"
+PYTHON_VERSION = "3.9.21"
 SOURCE_FILES = training_pipeline/ tests/
 
 TEMPORARY_FILES = pytest_results/ .coverage *.egg-info/ dist/ .ruff_cache/ .mypy_cache/ .pytest_cache/
